@@ -1,0 +1,44 @@
+﻿@page
+@model RepositoryPattern.Pages.StudentModel
+@{
+    ViewData["Title"] = "Student";
+}
+
+<h1>Student</h1>
+<form method="post">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>
+                    Address
+                </th>
+                <th>Phone</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var st in Model.Student)
+            {
+            <tr>
+                <td>@st.Id</td>
+                <td>@st.FirstName</td>
+                <td>@st.LastName</td>
+                <td>@st.Address</td>
+
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@st.Id">edit</a>
+                    <button type="submit" asp-page-handler="delete"
+                            asp-route-id="@st.Id">
+                        delete
+                    </button>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+
+    <a asp-page="./Create">Create</a>
+</form>
+

@@ -1,0 +1,22 @@
+﻿@page
+@model RepositoryPattern.Pages.NotificationModel
+@{
+    ViewData["Title"] = "Notification";
+}
+
+<html>
+<body>
+    <p>
+        Enter your name.
+    </p>
+    <div asp-validation-summary="All"></div>
+    <form method="POST">
+        <div>Name: <input asp-for="Notification.Id" value="1" /></div>
+        <div>Name: <input asp-for="Notification.NotificationText" /></div>
+        <div>Name: <input asp-for="Notification.NotificationTitle" /></div>
+        <div>Name: <input asp-for="Notification.CreatedDateTime" type="date" /></div>
+        <input type="submit" />
+    </form>
+</body>
+</html>
+

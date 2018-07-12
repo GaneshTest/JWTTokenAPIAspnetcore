@@ -1,0 +1,36 @@
+﻿@page
+@model RepositoryPattern.Pages.CreateModel
+@{
+    ViewData["Title"] = "Create";
+}
+
+<html>
+<body>
+    <p>
+        First  name.
+    </p>
+    <p>
+        Last name.
+    </p>
+    <p>
+        Addres.
+    </p>
+    <p>
+        Mob.
+    </p>
+    <p>
+        Rol.
+    </p>
+    <div asp-validation-summary="All"></div>
+    <form method="POST">
+        <div>Name: <input asp-for="Student.FirstName" /></div>
+        <div>Name: <input asp-for="Student.LastName" /></div>
+        <div>Name: <input asp-for="Student.Address" /></div>
+        <div>Name: <input asp-for="Student.MobileNumber" /></div>
+        <div>Name: <input asp-for="Student.RollNumber" /></div>
+        <input type="submit" value="Submit" />
+       
+    </form>
+</body>
+</html>
+
